@@ -11,7 +11,13 @@ public class BillDetails extends JFrame {
         setBounds(400,100,700,650);
         getContentPane().setBackground(Color.WHITE);
 
-        JTable table = new JTable();
+        JTable table = new JTable(){
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        table.getTableHeader().setReorderingAllowed(false);
         try{
             conn c = new conn();
             String query = "select * from bill where meter_no = '"+meter+"'";

@@ -15,7 +15,13 @@ class CustomerDetails extends JFrame implements ActionListener {
         setSize(1200,650);
         setLocation(200,150);
 
-        table = new JTable();
+        table = new JTable(){
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        table.getTableHeader().setReorderingAllowed(false);
 
         try{
             conn c = new conn();

@@ -55,7 +55,14 @@ class Depositdetails extends JFrame implements ActionListener {
         cmonth.add("December");
         add(cmonth);
 
-        table = new JTable();
+        table = new JTable(){
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+
+        table.getTableHeader().setReorderingAllowed(false);
 
         try{
             conn c = new conn();

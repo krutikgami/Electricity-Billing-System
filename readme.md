@@ -33,7 +33,7 @@ Follow these steps to set up and run the Electricity Billing System:
 
 Download the JAR file from the releases section of this repository:
 
-[Download Electricity Billing System JAR](https://github.com/your-username/electricity-billing-system/releases)
+[Download Electricity Billing System JAR](https://github.com/krutikgami/Electricity-Billing-System/tree/main/Out/artifacts/ElectricityBillingSystem_jar)
 
 ### 2. Set up the MySQL database
 
@@ -110,7 +110,7 @@ select * from bill;
 - Run the application using the following command:
 
 ```jar
-java -jar electricity-billing-system.jar
+java -jar Electricity-Billing-System.jar
 ```
 ## Usage
 ### Admin Panel
